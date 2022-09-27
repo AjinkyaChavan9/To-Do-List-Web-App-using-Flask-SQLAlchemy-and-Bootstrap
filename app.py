@@ -75,8 +75,8 @@ def login():
 		passw = request.form["password"]
 		login = User.query.filter_by(username=uname, password=passw).first()
 		if login is not None:
-			print(login)
-			print('login successful')
+			#print(login)
+			#print('login successful')
 			session["name"] = uname  # uname= request.form["username"] same as request.form.get("username")
 			return redirect(url_for("tasks"))
 		else:
@@ -86,13 +86,13 @@ def login():
 @app.route('/tasks',methods=['GET','POST'])
 def tasks():
 	uname = session.get("name")
-	print(uname)
+	#print(uname)
 	if not uname:
 		return redirect(url_for("login"))
 	if request.method=='POST':
 		title = request.form['title']
 		desc = request.form['desc']
-		print(uname)
+		#print(uname)
 		user = db.session.query(User).filter(User.username==uname).first()
 		todo = ToDo(task_title=title, task_desc=desc, user_id=user.uid)
 		db.session.add(todo)
