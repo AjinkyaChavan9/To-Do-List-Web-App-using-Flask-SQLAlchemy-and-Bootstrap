@@ -35,6 +35,11 @@ class ToDo(db.Model):
 	def __repr__(self) -> str:
 		return f"{self.tid} - {self.task_title}"
 
+# heroku run python -a <appname> 
+#Run below commands in python shell to create db
+# from app import db
+# db.create_all()
+
 @app.route('/')
 def website():
 	return render_template('index.html')
