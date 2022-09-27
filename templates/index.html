@@ -1,0 +1,51 @@
+{% extends 'base.html' %} <!--Inheritance -->
+
+<!--Child Class Body Block-->
+{% block body %}
+
+<nav class="d-flex justify-content-center navbar mb-4 bg-white border-bottom ">
+	
+		<a class="navbar-brand fs-3 fw-bold" href="/">To-Do List</a>
+		<div class="d-grid gap-2 d-md-block">
+			<a href="/register"><button type="button" class="btn btn-outline-primary me-md-2 fs-4">Register</button></a>
+			<a href="/login"><button type="button" class="btn btn-outline-primary w-auto fs-4">Login</button>	</a>
+		</div>	
+</nav>
+
+</header>
+<div class="p-5 mb-4 bg-light rounded-3">
+	<div class="container-fluid py-5 text-center">
+		<h1 class="display-5 fw-bold">To-Do List App</h1>
+				
+		<p>
+			<a class="btn btn-lg btn-success" href="/register" role="button"
+				>Register for Free</a
+			>
+						 
+		</p>
+	</div>
+</div>
+
+		 
+<div class="row marketing d-flex justify-content-center ">
+				 
+	<div class="col-lg-6">
+						 
+		<h4>Task 1</h4>					 
+		<p>Learn Django</p>
+										  
+		<h4>Task 2</h4>				 
+		<p>Learn JavaScript</p>						 
+					 
+	</div>
+			 
+</div>
+
+		 
+<footer class="footer d-flex justify-content-center ">			 
+	<p>&copy; Ajinkya Chavan 2022</p>			 
+</footer>	 
+</div>
+
+
+{% endblock body %}

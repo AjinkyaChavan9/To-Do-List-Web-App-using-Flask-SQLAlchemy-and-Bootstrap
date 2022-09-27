@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<nav class="d-flex justify-content-center navbar mb-4 bg-white border-bottom ">
+	<a class="navbar-brand fs-3 fw-bold" href="/tasks.html">To-Do List</a>
+	<a href="/logout"><button type="button" class="btn btn-outline-danger me-md-2 fs-4">Logout</button></a>.
+	<div class="d-grid gap-2 d-md-block">
+</div>
+</nav>
+
+
+<div class="container my-3">
+	<h2>Update Todo</h2>
+	<form action="/update/{{todo.tid}}" method="POST">
+		<div class="mb-3">
+		  <label for="title" class="form-label">Task Title</label>
+		  <input type="text" class="form-control" name="title" id="title" value="{{todo.task_title}}" aria-describedby="emailHelp"> 
+		</div>
+		<div class="mb-3">
+		  <label for="desc" class="form-label">Task Description</label>
+		  <input type="text" class="form-control" value="{{todo.task_desc}}" name="desc" id="desc">
+		</div>
+		
+		<button type="submit" class="btn btn-dark">Update</button>
+	  </form>
+</div>
+{% endblock body %}
