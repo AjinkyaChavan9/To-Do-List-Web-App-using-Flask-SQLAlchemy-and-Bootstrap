@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 #app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://todoappadmin:password123@localhost/todo"
+# use `heroku config --app <appname>` to get postgres url for heroku 
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://gkbtrwkruhxyod:4ff4bc30450ce96e838024b7f446d610ca28b365ffce90ba7c6acb6811153629@ec2-54-91-223-99.compute-1.amazonaws.com:5432/dfvtngfjg4e13r"
 app.config['SECRET_KEY'] = 'shhhhhhhhhhh'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
