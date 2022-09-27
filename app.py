@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 #app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://todoappadmin:password123@localhost/todo"
-# use `heroku config --app <appname>` to get postgres url for heroku 
+# use `heroku config --app <appname>` to get postgresql uri for heroku 
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://gkbtrwkruhxyod:4ff4bc30450ce96e838024b7f446d610ca28b365ffce90ba7c6acb6811153629@ec2-54-91-223-99.compute-1.amazonaws.com:5432/dfvtngfjg4e13r"
 app.config['SECRET_KEY'] = 'shhhhhhhhhhh'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -35,10 +35,16 @@ class ToDo(db.Model):
 	def __repr__(self) -> str:
 		return f"{self.tid} - {self.task_title}"
 
-# heroku run python -a <appname> 
+# SETTING UP DATABASE
+'''
+heroku addons:create heroku-postgresql:hobby-dev --app <appname>
+heroku config --app <appname> #to get postgresql uri for heroku 
+
+heroku run python -a <appname> 
 #Run below commands in python shell to create db
-# from app import db
-# db.create_all()
+from app import db
+db.create_all() 
+'''
 
 @app.route('/')
 def website():
