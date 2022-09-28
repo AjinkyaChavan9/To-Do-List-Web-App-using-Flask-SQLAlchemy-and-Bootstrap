@@ -2,7 +2,7 @@
 
 ### Web App that lets User *Create* their To-Do Tasks List and lets them *Update*, *Delete* or *Display* all their Tasks
 ### [To-Do List Web-App](https://to-do-list--webapp.herokuapp.com/)
-Here is the app preview:
+Here are some previews of the web app:
 
 ![App preview 1](https://imgur.com/gVV0Ae1.png)
 
