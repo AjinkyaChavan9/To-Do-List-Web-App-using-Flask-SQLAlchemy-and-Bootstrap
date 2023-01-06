@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 #db config for Render postgres
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://todo_34ef_user:fLHsj3LyJawyjp0C1aWOU9YGSTMEiLZA@dpg-ces08ah4reb1fuqb3gd0-a/todo_34ef" 
-#app.config['SECRET_KEY'] = 'shhhhhhhhhhh'
+app.config['SECRET_KEY'] = 'shhhhhhhhhhh'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
