@@ -8,7 +8,7 @@ app = Flask(__name__)
 #app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://gkbtrwkruhxyod:4ff4bc30450ce96e838024b7f446d610ca28b365ffce90ba7c6acb6811153629@ec2-54-91-223-99.compute-1.amazonaws.com:5432/dfvtngfjg4e13r"
 
 #db config for Render postgres
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("postgresql://todo_34ef_user:fLHsj3LyJawyjp0C1aWOU9YGSTMEiLZA@dpg-ces08ah4reb1fuqb3gd0-a/todo_34ef") 
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL") 
 app.config['SECRET_KEY'] = 'shhhhhhhhhhh'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
